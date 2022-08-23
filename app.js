@@ -1,8 +1,13 @@
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-    res.write('Welcome to home page')
-    res.end()
+    if (req.url === "/") {
+        res.end('Welcome to home page')
+    }
+    if (res.url === "/about") {
+        res.end('Welcome to about')
+    }
+    res.end("<h1 >Oops</h1>")
 })
 
 server.listen(5000)
