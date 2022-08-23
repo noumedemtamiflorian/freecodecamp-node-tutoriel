@@ -1,12 +1,9 @@
-const os = require('os');
+const path = require('path');
 
-const user = os.userInfo()
+const sep = path.sep
 
-const currentOs = {
-    name: os.type(),
-    release: os.release(),
-    totelMem: os.totalmem(),
-    freeMen: os.freemem()
-}
+const filepath = path.join("/Content/", 'SubContent', 'text.txt')
 
-console.log(currentOs);
+const base = path.basename(filepath)
+
+console.log(sep, filepath, base);
