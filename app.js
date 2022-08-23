@@ -1,9 +1,8 @@
-const { readFileSync, writeFileSync } = require('fs')
+const http = require('http')
 
-const fisrt = readFileSync('./Content/first.txt', 'utf-8')
-const second = readFileSync('./Content/second.txt', 'utf-8')
+const server = http.createServer((req, res) => {
+    res.write('Welcome to home page')
+    res.end()
+})
 
-console.log(fisrt, second);
-
-writeFileSync('./Content/result.txt',
-    `Voici la somme des 2 fichiers texte : ${fisrt} ${second}`)
+server.listen(5000)
