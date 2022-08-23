@@ -6,7 +6,6 @@
   "author": "noumedem tami florian <noumedemtamiflorian@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "boostrap": "^2.0.0",
     "lodash": "^4.17.21"
   }
 }
