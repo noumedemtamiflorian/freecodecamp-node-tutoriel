@@ -1,9 +1,9 @@
-const path = require('path');
+const { readFileSync, writeFileSync } = require('fs')
 
-const sep = path.sep
+const fisrt = readFileSync('./Content/first.txt', 'utf-8')
+const second = readFileSync('./Content/second.txt', 'utf-8')
 
-const filepath = path.join("/Content/", 'SubContent', 'text.txt')
+console.log(fisrt, second);
 
-const base = path.basename(filepath)
-
-console.log(sep, filepath, base);
+writeFileSync('./Content/result.txt',
+    `Voici la somme des 2 fichiers texte : ${fisrt} ${second}`)
